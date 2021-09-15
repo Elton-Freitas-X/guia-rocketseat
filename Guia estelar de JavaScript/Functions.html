@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <script>
+        /*
+        Funções são tipos de dados estruturais, que são declarados dessa forma: function nomeFunção() { código à cer executado } e para executar a função, usa-se: nomeFunção(). Uma função é importante para o agrupamento e reutilização de código.
+
+        Agrupamento de codigo, reutilização do codigo e dar significado
+        */
+
+        //function expression
+        //function anonymous
+
+        /*                    //parametros
+        const sum = function(num1, num2){
+            console.log(num1 + num2)
+        }
+
+        sum(2, 3) // argumentos
+        
+
+
+        ---TESTE-----
+
+        const sum = function(num1, num2){
+            let total = num1 + num2
+            return total
+        }
+
+        num1 = 40 
+        num2 = 60
+
+        console.log(`numero 1 é ${num1}`)
+        console.log(`numero 1 é ${num2}`)
+        console.log(`a some é ${sum(num1, num2)}`)
+        //console.log(total) aqui da erro pq o total nao foi definido fora da função, o total dentro da função so funciona naquele escopo
+        */
+
+        /* Função é um liquidificador
+
+        function fazerSuco(fruta1, fruta2){
+            return `suco de: ${fruta1} e ${fruta2}`
+        }
+
+        const copo = fazerSuco('uva','banana')
+
+        console.log(copo)
+        */  
+
+
+
+        /*-----------Function hoisting-----------
+        
+        sayMyName()
+
+        function sayMyName() {
+            console.log('Mayk')
+        }
+
+        se colocar uma variavel antes da function ele 
+        nao sofre o hoisting
+        */
+
+        /*-----------------Arrow function
+
+        const sayMyName = (nome) => {
+            console.log(nome)
+        }
+
+        sayMyName('Mayk')
+        */
+
+
+
+        /*--------------CALLBACK FUNCTION--------------
+        
+        Uma callback function é uma função que está sendo passada para outra função como parâmetro. 
+        */
+
+        /*function sayMyName() {
+            console.log('antes de excutar a funcao callback')
+
+            function  name() {
+                console.log('estou em uma callback')
+
+            }
+            name()
+
+            console.log('depois de executar a callback')
+        }
+
+         --------------- OU --------------------
+
+        function sayMyName(name) {
+            console.log('antes de excutar a funcao callback')
+
+            name()
+
+            console.log('depois de executar a callback')
+        }
+            
+
+           sayMyName(
+            () =>  {
+                console.log('estou em uma callback')
+            }
+        )
+        */
+
+        /*---------------Function() constructor-----------
+        
+            expressao new 
+            criar um novo objeto
+            this keyword
+        
+
+        function Person(name) {
+            this.name = name
+            this.walk = () => {
+                return `${this.name} andando`
+            }
+        }
+
+        const Everton = new Person('Vertto') 
+        const Elton = new Person('Melzinho')
+
+        console.log(Elton.walk())
+        console.log(Everton.walk())
+
+
+
+        -----------------Array com construtor----------
+        
+        let myArray = new Array('a', 'b', 12, )
+        console.log(myArray)
+        */
+
+
+
+         /* Type conversion or typecasting vs type coersion--------
+                Alteracao de um tipo de dado para outro tipo
+                
+                console.log(Number('19') +1)
+
+            EXEMPLO
+
+            let string = '123'
+            string = Number(string)
+            console.log(string)
+    
+            let number = 321 
+            number = String(number)
+            console.log(number)
+    
+            console.log(Number(number) + string)
+         */
+
+         
+
+
+
+         /* VER QUANTIDADE DE CASAS DECIMAIS E QUANTIDADE DE LETRAS TEM UMA PALAVRA
+
+         let animals = 'Lion' //tem 4 letras
+
+         console.log(animals.length)
+         
+         
+         //*********Other example********
+         
+         let num = 12341123
+         
+         console.log(String(num).length)
+
+         ---------------------Transformar um numero quebrado com 2 casa decimais e trocar por virgula----------------------
+         
+         let number = 346.1232132
+         
+         console.log(number.toFixed(3).replace(".", ","))
+
+         trocou ponto para virgula usando o REPLACE
+
+
+
+         TRASFORMA LETRAS MINUSCULAS EM MAISUCULAS E O CONTRARIO TBM
+         
+         let word = "devo estar gritando porque estou em caps lock"
+         
+         console.log(word.toLocaleUpperCase())
+         console.log(word.toLocaleLowerCase())
+
+
+        -----------Testando----------
+         
+         let phrase = " Eu quero viver bebendo"
+         let myArray = phrase.split(" ")
+         let phaseWithUnderscore = myArray.join("_") //para juntar
+         console.log(phaseWithUnderscore.toLocaleUpperCase())
+
+         Verificar se o texto contém a palavra Amor
+         
+         let phrase = "Eu quero viver o Amor!"
+         console.log(phrase.includes("Amor")) // para verificar
+
+
+
+         TRANSFORMANDO UMA CADEIA DE CARACTERES EM ELEMENTOS DE UM ARRAY
+         
+         let word = "manipulação"
+         console.log(Array.from(word))
+
+
+
+        ------------ Manipulando Arrays----------------
+
+        let techs = ["html", "css", "js"]
+
+        //add um item no fim
+        techs.push("python")
+
+        //item no começo
+        techs.unshift("sql")
+
+        //remover do fim
+        //techs.pop()
+
+        //remover do começo
+        //techs.shift()
+
+        //pegar somente alguns elemento do arrays
+        //console.log(techs.slice(1))
+
+        //remover 1 ou mais items em qualquer posição do array
+        //console.log(techs.splice(1, 2))
+
+        //encontrar a posição de um elemento no array
+        //let index =  techs.indexOf('css')
+        // console.log(index)
+
+         console.log(techs)
+         */
+         </script>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Semântica</h1>
+    <!--Semântica oque melhor descreve oque eu vou fazer aqui--> 
+
+
+    <!--LISTAS ORDER NAS E NAO ORDENADAS-->
+    <ul>
+        <li>3 folhas de couve</li>
+        <li>1 laranja</li>
+        <li>1 padacinho gengibre</li>
+        <li>300 ml de agua</li>
+        <li>Adoçandote </li>
+        <li>Gelo a gosto</li>
+    </ul>
+
+    <ol>
+        <li>3 folhas de couve</li>
+        <li>1 laranja</li>
+        <li>1 padacinho gengibre</li>
+        <li>300 ml de agua</li>
+        <li>Adoçandote </li>
+        <li>Gelo a gosto</li> 
+    </ol>
+
+    <br><br>
+
+    <!--Citações <blockquote> <cite> <q>-->
+
+        <blockquote cite="https://brasilescola.uol.com.br/portugues/semantica.htm">
+            O <strong>Elemento HTML <code>&lt;blockquote&gt;</code></strong>
+            (ou <em>Quotation Element</em>) indica que um texto externo
+            foi citado.
+        </blockquote>
+
+        <p>
+            De acordo com <a href="https://brasilescola.uol.com.br/portugues/semantica.htm">
+            <cite>pagina MDN blockquote</cite>
+        </p>
+
+        <p> O elemento - <code>&lt;q &gt;</code> - é <q cite="https://brasilescola.uol.com.br/portugues/semantica.htm">
+        Usado apara citações curtas que não precisam de parágrafos ou quebras de linha.</q>
+        <cite>pagina MDN blockquote</cite></p>
+        <br><br>
+
+        <!--Abreviaçoes <abbr>-->
+        <p>Usamos <abbr title="Hypertext Markup Language">Html</abbr>
+        para estruturar nossos documento da web.</p>
+        <br><br>
+
+
+        <br><br><br><br>
+           <address><!--so para especificar quem fez a pagina-->
+               <p>Elton Freitas</p>
+               <strong>Recife Pernambuco</strong>
+           </address>
+           <br><br>
+
+            <h2>Glossário</h2> <!--LISTAS DE DESCRIÇÃO-->
+            <dl>
+                <dt>Hypertext</dt>
+                <dd>É um hiper texto com posibilidades...</dd>
+
+                <dt>Markup</dt>
+                <dd>Marcação do texto</dd>
+            </dl>
+            <br><br>
+
+            <!--Representaodo codigos de computador 
+    
+            <code> 
+                Partes genéricas de código
+
+            <pre>
+                Blocos de cídogo, pois essa tag mantém os espaços em 
+                brancos e recuos que eu colocaria no meu codigo
+            -->
+            <pre>
+                <code>
+                    documento
+                        .querySelector("body")
+                </code>
+            </pre>
+            <br><br>
+
+            <!--Eelementos genericos 
+                
+                div 
+                span
+            -->
+
+            <div><!--cria um bloco-->
+                um texto qualquer
+                <span>qualquer coisa</span><!--mantem em linha-->
+            </div>
+
+</body>
+</html>

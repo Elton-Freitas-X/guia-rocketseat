@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+</head>
+<body>
+
+
+    <!--
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <div id="output"></div>
+    -->
+
+
+
+    <script>
+        let n1 = prompt("digite um numero")
+        n1 = parseFloat(n1)
+
+        let n2 = prompt("digite outro numero")
+        n2 = parseFloat(n2)
+
+        let soma = n1 + n2
+
+        document.write(`<h1>A soma é ${soma}</h1>`)
+        console.log(soma)
+
+    
+
+        /*
+        var nome = prompt("Qual seu nome")
+
+        alert(`Bem vindo ${nome}`)
+
+        
+         FAZENDO SIMA E SUBTRAÇÃO E MOSTRANDO NA TELA
+
+        var n1 = prompt("digite um numnero")
+        n1 = parseFloat(n1)
+
+        escreve()
+
+        function escreve(){
+            var output = 
+            document.querySelector("#output")
+            output.innerHTML = n1
+        }
+
+        function calcular(simbolo){
+            var n = prompt("digite um numero")
+            n = parseFloat(n)
+            //n1 += n
+
+            switch(simbolo){
+                case '+': 
+                    n1 += n;
+                    break;
+
+                case '-':
+                    n1 -= n;
+                    break
+            }
+
+            escreve()
+        }
+        
+        
+        -----------ANOTHER EXERCISE----------
+
+
+            let Elton = 60
+
+            if(Elton >= 90) {
+                console.log( `A nota de Elton é A`)
+            }else if(Elton >= 80 || Elton <= 89){
+                console.log( `A nota de Elton é B`)
+            }else if(Elton >= 70 || Elton <= 79){
+                console.log( `A nota de Elton é C`)
+            }else if(Elton >= 60 || Elton <= 69){
+                console.log( `A nota de Elton é D`)
+            }else if(Elton <= 60){
+                console.log( `A nota de Elton é F`)
+            }
+        
+
+
+
+            ----other exercise--------
+
+        let family = {
+            receitas: [600, 1300, 580.99],
+            despesas: [1000, 420.13, 850,75]
+        }
+
+        
+
+        function sum(array) {
+            let total = 0
+
+            for(let value of array) {
+                total += value
+            }
+
+            return total
+        }
+
+
+
+        function calculoBalance() {
+            const calculateR = sum(family.receitas)
+            const calculateD = sum(family.despesas)
+
+            const total = calculateD - calculateR
+
+            const itsOk = total >= 0
+
+            let balanceText = "negativo"
+            if (itsOk){
+                balanceText = "positivo"
+            }
+
+            console.log(`Seu saldo é ${balanceText}: ${total.toFixed(2)}R$`)
+        }
+
+        calculoBalance()
+
+
+        -----------------------other exercise--------
+        
+        // trasnforme em 50F
+        function transformDegree(degree){
+            const celsiusExists = degree.toUpperCase().includes('C')
+            const fahrenheitExists = degree.toUpperCase().includes('F')
+            
+            if(!celsiusExists && !fahrenheitExists){
+                throw new Error('Grau não identificado')
+                
+            }
+            
+            //fluxo ideia, F -> C
+            let updatedDegree = Number(degree.toUpperCase().replace("F", ""));
+            let formula = fahrenheit => (fahrenheit - 32) * 5/9
+            let degreeSign = 'C'
+            
+            
+            //Fluxo alternatico C -> F
+            if(celsiusExists) {
+                updatedDegree = Number(degree.toUpperCase().replace("C", ""));
+                formula = celsius => celsius * 9/5 + 32
+                degreeSign = 'F'
+            }
+            
+            return formula(updatedDegree) + degreeSign
+        }
+        
+        try {
+            console.log(transformDegree('50C'))
+            console.log(transformDegree('50F'))
+        }catch(error){
+            console.log(error.message)
+        }
+
+         --------------------other exercise--------
+        */
+
+        /*
+        const booksByCategory = [
+    {
+        category: "Riqueza",
+        books: [
+            {
+                title: "Os segredos da mente milionária",
+                author: "T. Harv Eker",
+            },
+            {
+                title: "O homem mais rico da Babilônia",
+                author: "George S. Clason",
+            },
+            {
+                title: "Pai rico, pai pobre",
+                author: "Robert T. Kiyosaki e Sharon L. Lechter",
+            },
+        ],
+    },
+    {
+        category: "Inteligência Emocional",
+        books: [
+            {
+                title: "Você é Insubstituível",
+                author: "Augusto Cury",
+            },
+            {
+                title: "Ansiedade – Como enfrentar o mal do século",
+                author: "Augusto Cury",
+            },
+            {
+                title: "Os 7 hábitos das pessoas altamente eficazes",
+                author: "Stephen R. Covey",
+            },
+        ],
+    },
+];
+
+    const totalCategories = booksByCategory.length
+    console.log(totalCategories)
+
+    for(let category of booksByCategory) {
+        console.log('Total de livros da categoria', category.category)
+        console.log(category.books.length)
+    }
+
+    function countAuthors() {
+        let authors = [];
+
+        for(let category of booksByCategory){
+            for(let book of category.books) {
+                if(authors.indexOf(book.author) == -1){
+                    authors.push(book.author)
+                }
+            }
+        }
+        console.log('Total de autores', authors.length)
+    }
+    countAuthors()
+
+    function livrodoAutor(author) {
+        let books = [];
+
+        for(let category of booksByCategory){
+            for(let book of category.books) {
+                if(book.author == 'Augusto Cury'){
+                    books.push(book.title)
+                }
+            }
+        }
+
+        console.log(`Livros do autor ${author}: ${books.join(", ")}`)
+    }
+    livrodoAutor('Stephen R. Covey')
+
+
+       */
+    </script>
+</body>
+</html>

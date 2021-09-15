@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condicionais e controle de fluxo</title>
+</head>
+<body>
+    <script>
+        /*
+        if (condição) {
+        //apenas será executado o bloco de código caso condição seja true
+        } else {
+        // apenas será executado o bloco de código caso condição do if seja false
+        }
+        
+        let temperature = 36.9
+        let highTemperature = temperature >= 37.5
+        let mediumTemperature = temperature < 37.5 && temperature >= 37
+        
+        if(highTemperature) {
+            console.log('Febre alta')
+        } else if(mediumTemperature) {
+            console.log('Febre moderada')
+        } else {
+            console.log('Saudável')
+        }
+        
+
+        Meu exempl XD
+        let carinho = 'carinho'
+        let atensaum = 'ateção'
+                
+        let Elton = {
+            nome: 'Elzinho',
+            carinho,
+            atensaum, 
+        }
+
+        let Everton = {
+            nome: 'Vertto',
+            carinho
+        }
+                        
+        if (Elton.length = 2) {
+        console.log(`${Elton.nome} filho favorito`)
+        } else {
+        console.log(`${Everton.nome} filho favorito`)
+        }
+
+
+        ----------switch----------
+        
+
+        let expression = 'a'
+
+        switch (expression) {
+            case 'a' :
+                //codigo
+                console.log('a')
+                break
+            
+            case 'b' : 
+                //codigo para a expression b 
+                console.log('b')
+                break
+            
+            default: 
+                console.log('default')
+                break
+        }
+
+        // Other example
+
+        function calculate(number1, operator, number2) {
+        let result = 0;
+
+        switch (operator) {
+            case '+':
+                result = number1 + number2
+                break
+            case '-':
+                result = number1 - number2 
+                break
+            case '*':
+                result = number1 * number2
+                break
+            case '/':
+                result = number1 / number2 
+                break
+            default:
+                console.log('não implementado')
+                break
+        }
+
+            return result
+            }
+
+            console.log(calculate(4, '%', 8))
+    */
+
+        //throw
+
+        function sayMyNmae(name = '') {
+            if (name === '') {
+                throw ("nome é necessário /conseguiu pegar o erro")
+            }
+
+            console.log('depois do erro')
+        }
+
+        //try...catch   ////tratamento de erro
+
+        try {
+            sayMyNmae() // escrever aqui oq quer deve aparecer
+        } catch(e) {
+            console.log(e)
+        }
+
+        console.log('apos ao try/catch')
+    </script>
+</body>
+</html>
