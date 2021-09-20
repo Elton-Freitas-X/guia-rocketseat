@@ -7,9 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div id="output"></div>
 </body>
     <script>
+        let output = document.querySelector("#output");
+
+        let mensagem = "";
+        for(var i = 0; i < 100; i++){
+
+            mensagem += "i: " + i + '<br>'
+        }
+        output.innerHTML = mensagem
+
         /*      
         let jogador1 = prompt("digite um numero")
         jogador1 = parseInt(jogador1)
@@ -94,14 +103,30 @@
             
             indice = indice + 1       
         }
-        */   
-
+        
         let ano = 1004; 
-
+        
         while(ano <= 2017){
             document.write(ano + '</br>')
             ano += 4
         }
+
+
+        //--------------ANOS BISSEXTO-----------------
+        
+        let ano = 1004; 
+        
+        while(ano <= 2000){
+
+            if( !(ano % 100  === 0) || (ano % 400 === 0)){
+                document.write(ano + '</br>')
+            } else {
+                document.write(`${ano} não é bissexto<br>`)
+            }
+            ano += 4
+        }
+        */   
+
 
     </script>
 </html>
