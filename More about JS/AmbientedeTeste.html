@@ -7,42 +7,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="mostrartaboada()">Taboada</button>
-    <button onclick="limpartaboada()">limpar taboada</button>
-
+    <button onclick="somar()">+</button>
     <div id="output"></div>
-
-
-
 </body>
     <script>
-        
-        function mostrartaboada() {
-            let numero = prompt('digite um numero')
-            numero = parseFloat(numero)
+        let numero = prompt("digite um numero")
+        numero = parseFloat(numero)
+        escrever()
 
-            limpartaboada()
 
-            let i = 1
-
-            while( i <= 100) {
-                mensagem += `${numero} x ${i} = ${numero * i} <br>`
-                i++
-            }
-
-            output.innerHTML = mensagem
+        function escrever(){
+            let output = document.querySelector('#output')
+            output.innerHTML = numero
         }
 
-        function limpartaboada(){
-            mensagem = ''
+        function somar() {
+             let othernumber = prompt("digite outro numero para somar")
+             othernumber = parseFloat(othernumber)
 
-            output.innerHTML = mensagem
+             numero = othernumber + numero
+
+             escrever()
         }
-
-
-        let output = document.querySelector('#output')
-        
-        let mensagem = '';
-        output.innerHTML = mensagem
-        </script>
+    </script>
 </html>
