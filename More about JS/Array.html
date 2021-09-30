@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body> 
+    <h1>Arrays - Agrupamento de dados</h1>
+    <div id="output"></div>
+
+    <script>
+
+        let produtos = new Array('borracha','caneta', 'caneca' ,'caneleta');
+        produtos.push('cartolina', 'coca-cola')
+
+        
+        let output = document.querySelector('#output')
+
+        let msg = '';
+        for( let i = 0; i < produtos.length; i++){
+            msg  += `produto ${i + 1} : ${produtos[i]}<br>`
+        }
+        
+        output.innerHTML = msg  //.toString()para converter de Array para string
+
+        
+        
+    </script>
+</body>
+</html>
